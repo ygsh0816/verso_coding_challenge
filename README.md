@@ -14,7 +14,7 @@ This project is a Django REST API for managing companies, products, and orders. 
 1. Clone the repository:
    ```bash
    git clone https://github.com/ygsh0816/verso_coding_challenge.git
-   cd verso-coding-task
+   cd verso_coding_challenge
    ```
 
 2. Create and activate a virtual environment:
