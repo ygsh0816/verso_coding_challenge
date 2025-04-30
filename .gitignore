@@ -1,0 +1,50 @@
+
+---
+
+### `.gitignore`
+
+Here’s a `.gitignore` file for your project:
+
+```plaintext
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.sqlite3
+
+# Virtual Environment
+venv/
+env/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+media/
+staticfiles/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Test Coverage
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+
+# Pytest
+.cache/
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDEs
+.idea/
+*.swp
