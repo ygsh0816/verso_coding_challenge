@@ -42,7 +42,29 @@ This project is a Django REST API for managing companies, products, and orders. 
 
 ### Company Endpoints
 - `GET /api/companies/`: List all companies.
+  #### Response 
+  <pre>
+  [
+    {
+        "id": 2,
+        "name": "New Company",
+        "address": "123 Business Street1"
+    },
+    {
+        "id": 3,
+        "name": "Latest Inc",
+        "address": "Falana Dhimkana"
+    }
+  ] 
+  </pre>
 - `POST /api/companies/`: Create a new company.
+    #### Request Data
+    <pre>
+    {
+        "name": "Customer Inc.",
+        "address": "123 Business Street"
+    }
+  </pre> 
 - `GET /api/companies/<id>/`: Retrieve a specific company.
 - `PUT /api/companies/<id>/`: Update a specific company(Complete Object).
 - `PATCH /api/companies/<id>/`: Update a specific company(Certain attributes).
@@ -51,18 +73,47 @@ This project is a Django REST API for managing companies, products, and orders. 
 ### Product Endpoints
 - `GET /api/products/`: List all products.
 - `POST /api/products/`: Create a new product.
+    #### Request Data
+    <pre>
+    {
+        "name": "Widget",
+        "price": 9.99
+    }
+  </pre>
 - `GET /api/products/<id>/`: Retrieve a specific product.
 - `PUT /api/products/<id>/`: Update a specific product(Complete Object).
 - `PATCH /api/products/<id>/`: Update a specific product(Certain attributes).
 - `DELETE /api/products/<id>/`: Delete a specific product.
 
+
 ### Order Endpoints
 - `GET /api/orders/`: List all orders.
 - `POST /api/orders/`: Create a new order.
+  #### Request Data
+    <pre>
+      {
+        "customer_id": 2,
+        "supplier_id": 3,
+        "items": [
+          {
+            "product_id": 3,
+            "quantity": 2
+          },
+          {
+            "product_id": 2,
+            "quantity": 3
+          }
+        ]
+      }
+      </pre>
 - `GET /api/orders/<id>/`: Retrieve a specific order.
 - `PUT /api/orders/<id>/`: Update a specific order(Complete Object).
 - `PATCH /api/orders/<id>/`: Update a specific order(Certain attributes).
 - `DELETE /api/orders/<id>/`: Delete a specific order.
+
+#### Orders POST API request Data
+
+
 
 ## Running Tests
 
